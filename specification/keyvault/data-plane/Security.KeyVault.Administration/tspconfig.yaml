@@ -28,3 +28,11 @@ options:
   # "@azure-tools/typespec-csharp": true
   # Uncomment this line and add "@azure-tools/typespec-ts" to your package.json to generate Typescript code
   # "@azure-tools/typespec-ts": true
+  "@azure-tools/typespec-ts":
+    package-dir: "keyvault-admin"
+    generateMetadata: false
+    generateTest: false
+    isModularLibrary: true
+    packageDetails:
+      name: "@azure/keyvault-admin"
+    flavor: azure
