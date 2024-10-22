@@ -35,6 +35,7 @@ op fullBackupStatus is Azure.Core.Foundations.Operation<
  */
 #suppress "@azure-tools/typespec-azure-core/use-standard-operations" "Foundations.Operation is necessary for Key Vault"
 @pollingOperation(fullBackupStatus)
+@finalOperation(fullBackupStatus)
 @route("/backup")
 @post
 op fullBackup is Azure.Core.Foundations.LongRunningOperation<

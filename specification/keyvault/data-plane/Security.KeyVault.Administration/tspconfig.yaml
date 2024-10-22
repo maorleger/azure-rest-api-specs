@@ -36,4 +36,3 @@ options:
     packageDetails:
       name: "@azure/keyvault-admin"
     flavor: azure
-    emitter-output-dir: "{project-root}/sdk/keyvault/keyvault-admin/src/generated"
