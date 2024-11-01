@@ -309,7 +309,7 @@ model FullBackupOperation {
    * The start time of the backup operation in UTC
    */
   @encode("unixTimestamp", int32)
-  startTime?: utcDateTime;
+  startTime: utcDateTime;
 
   /**
    * The end time of the backup operation in UTC
@@ -429,7 +429,7 @@ model RestoreOperation {
    * The start time of the restore operation
    */
   @encode("unixTimestamp", int32)
-  startTime?: utcDateTime;
+  startTime: utcDateTime;
 
   /**
    * The end time of the restore operation
