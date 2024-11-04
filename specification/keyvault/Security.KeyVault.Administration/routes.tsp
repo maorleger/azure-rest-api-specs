@@ -305,7 +305,7 @@ interface RoleDefinitions {
   /**
    * Deletes a custom role definition.
    */
-  @route("/{scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionName}")
+  @route("/{+scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionName}")
   @delete
   delete is Azure.Core.Foundations.Operation<
     {
@@ -327,7 +327,7 @@ interface RoleDefinitions {
   /**
    * Creates or updates a custom role definition.
    */
-  @route("/{scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionName}")
+  @route("/{+scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionName}")
   @put
   createOrUpdate is Azure.Core.Foundations.Operation<
     {
@@ -356,7 +356,7 @@ interface RoleDefinitions {
   /**
    * Get the specified role definition.
    */
-  @route("/{scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionName}")
+  @route("/{+scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionName}")
   @get
   get is Azure.Core.Foundations.Operation<
     {
@@ -378,7 +378,7 @@ interface RoleDefinitions {
   /**
    * Get all role definitions that are applicable at scope and above.
    */
-  @route("/{scope}/providers/Microsoft.Authorization/roleDefinitions")
+  @route("/{+scope}/providers/Microsoft.Authorization/roleDefinitions")
   @get
   list is Azure.Core.Foundations.Operation<
     {
@@ -404,7 +404,7 @@ interface RoleAssignments {
   /**
    * Deletes a role assignment.
    */
-  @route("/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}")
+  @route("/{+scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}")
   @delete
   delete is Azure.Core.Foundations.Operation<
     {
@@ -426,7 +426,7 @@ interface RoleAssignments {
   /**
    * Creates a role assignment.
    */
-  @route("/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}")
+  @route("/{+scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}")
   @put
   create is Azure.Core.Foundations.Operation<
     {
@@ -454,7 +454,7 @@ interface RoleAssignments {
   /**
    * Get the specified role assignment.
    */
-  @route("/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}")
+  @route("/{+scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}")
   @get
   get is Azure.Core.Foundations.Operation<
     {
@@ -476,7 +476,7 @@ interface RoleAssignments {
   /**
    * Gets role assignments for a scope.
    */
-  @route("/{scope}/providers/Microsoft.Authorization/roleAssignments")
+  @route("/{+scope}/providers/Microsoft.Authorization/roleAssignments")
   @get
   listForScope is Azure.Core.Foundations.Operation<
     {
