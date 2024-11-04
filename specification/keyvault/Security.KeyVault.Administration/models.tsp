@@ -1,9 +1,11 @@
-import "@typespec/rest";
 import "@typespec/http";
+import "@typespec/rest";
+import "@typespec/versioning";
 import "@azure-tools/typespec-azure-core";
 
-using TypeSpec.Rest;
 using TypeSpec.Http;
+using TypeSpec.Rest;
+using TypeSpec.Versioning;
 using Azure.Core;
 
 namespace KeyVault;
@@ -309,7 +311,7 @@ model FullBackupOperation {
    * The start time of the backup operation in UTC
    */
   @encode("unixTimestamp", int32)
-  startTime: utcDateTime;
+  startTime?: utcDateTime;
 
   /**
    * The end time of the backup operation in UTC
@@ -367,6 +369,7 @@ model KeyVaultError {
 /**
  * The authentication method and location for the backup operation.
  */
+@added(KeyVault.Versions.`v7.6_preview.1`)
 model PreBackupOperationParameters {
   /**
    * Azure Blob storage container Uri
@@ -389,6 +392,7 @@ model PreBackupOperationParameters {
 /**
  * The authentication method and location for the restore operation.
  */
+@added(KeyVault.Versions.`v7.6_preview.1`)
 model PreRestoreOperationParameters {
   /**
    * A user-provided SAS token to an Azure blob storage container.
@@ -429,7 +433,7 @@ model RestoreOperation {
    * The start time of the restore operation
    */
   @encode("unixTimestamp", int32)
-  startTime: utcDateTime;
+  startTime?: utcDateTime;
 
   /**
    * The end time of the restore operation
