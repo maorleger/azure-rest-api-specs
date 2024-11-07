@@ -30,6 +30,7 @@ options:
     package-dir: "keyvault-admin"
     generateMetadata: false
     generateTest: false
+    experimentalExtensibleEnums: true
     isModularLibrary: true
     packageDetails:
       name: "@azure/keyvault-admin"
