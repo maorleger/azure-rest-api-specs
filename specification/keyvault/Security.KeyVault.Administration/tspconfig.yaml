@@ -31,6 +31,7 @@ options:
     generateMetadata: false
     generateTest: false
     experimentalExtensibleEnums: true
+    compatibilityMode: true
     isModularLibrary: true
     packageDetails:
       name: "@azure/keyvault-admin"
